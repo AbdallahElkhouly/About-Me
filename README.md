@@ -16,4 +16,4 @@ This is my personal portfolio website built using **HTML**, **CSS**, and a bit o
 - JavaScript
 
 ## Purpose
-The purpose of this website is to create a personal space that reflects who I am, what I enjoy, and the projects I 
+The purpose of this website is to create a personal space that reflects who I am, what I enjoy, and the projects I work on while improving my front-end development skills.
