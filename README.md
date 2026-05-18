@@ -1,2 +1,19 @@
-# About-Me
-Welcome to my personal website... a space where I share my interests, projects, skills, and creativity. Here you can explore the things I enjoy, from technology and programming to design, AI, and unique ideas that reflect who I am and what I love creating.
+# About Me Website
+
+This is my personal portfolio website built using **HTML**, **CSS**, and a bit of **JavaScript**. It is designed to showcase my interests, projects, skills, and creativity in a clean and modern style.
+
+## Features
+- Responsive design
+- Modern UI
+- About Me section
+- Interests & hobbies showcase
+- CSS animations and styling
+- Interactive elements with JavaScript
+
+## Technologies Used
+- HTML
+- CSS
+- JavaScript
+
+## Purpose
+The purpose of this website is to create a personal space that reflects who I am, what I enjoy, and the projects I 
