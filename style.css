@@ -1,0 +1,153 @@
+:root{
+  --bg:#0e1116;
+  --bg-2:#151a22;
+  --ink:#e6e8ec;
+  --ink-soft:#9aa3b0;
+  --muted:#7a828f;
+  --line:rgba(255,255,255,.08);
+  --accent:#7aa2c8;       /* soft steel blue */
+  --accent-2:#c8a87a;     /* warm sand */
+  --accent-3:#8fb39a;     /* muted sage */
+  --shadow:0 30px 80px -30px rgba(0,0,0,.7);
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:var(--bg);color:var(--ink);font-family:"Inter",system-ui,sans-serif;overflow:hidden}
+body{
+  background:
+    radial-gradient(1200px 600px at 80% -10%, rgba(122,162,200,.10), transparent 60%),
+    radial-gradient(900px 500px at -10% 110%, rgba(200,168,122,.08), transparent 60%),
+    var(--bg);
+}
+h1,h2,h3{font-family:"Space Grotesk",sans-serif;letter-spacing:-.02em;line-height:1.05}
+em{font-style:normal;color:var(--accent-2)}
+.accent{color:var(--accent)}
+
+.grain{position:fixed;inset:0;pointer-events:none;z-index:2;opacity:.05;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.9'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.top{position:fixed;top:0;left:0;right:0;z-index:5;display:flex;align-items:center;justify-content:space-between;padding:22px 32px}
+.brand{font-family:"Space Grotesk";font-weight:700;letter-spacing:.04em}
+.brand span{color:var(--accent)}
+.dots{display:flex;gap:10px}
+.dot{width:8px;height:8px;border-radius:99px;background:rgba(255,255,255,.18);border:0;padding:0;cursor:pointer;transition:all .3s}
+.dot.active{background:var(--accent);width:22px}
+.hint{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--muted);letter-spacing:.15em;text-transform:uppercase}
+
+.track{
+  display:flex;
+  height:100vh;
+  width:100vw;
+  overflow-x:auto;
+  overflow-y:hidden;
+  scroll-snap-type:x mandatory;
+  scroll-behavior:smooth;
+  scrollbar-width:none;
+}
+.track::-webkit-scrollbar{display:none}
+
+.slide{
+  flex:0 0 100vw;
+  height:100vh;
+  scroll-snap-align:start;
+  padding:120px 8vw 80px;
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:24px;
+}
+.num{position:absolute;top:90px;right:8vw;font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--muted);letter-spacing:.2em}
+.kicker{font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--accent);letter-spacing:.25em;text-transform:uppercase}
+h1{font-size:clamp(40px,6.5vw,86px);font-weight:700;max-width:14ch}
+h2{font-size:clamp(48px,9vw,140px);font-weight:700;color:var(--ink);opacity:.96}
+h3{font-size:18px;margin-bottom:6px}
+.big{font-size:clamp(18px,1.8vw,24px);max-width:62ch;color:var(--ink);opacity:.85;line-height:1.55}
+.lede{font-size:18px;color:var(--muted);max-width:48ch}
+
+.cta{
+  align-self:flex-start;margin-top:18px;
+  background:transparent;color:var(--ink);
+  border:1px solid var(--accent);padding:14px 22px;border-radius:99px;
+  font-family:inherit;font-size:14px;letter-spacing:.05em;cursor:pointer;
+  transition:all .25s ease;
+}
+.cta:hover{background:var(--accent);color:var(--bg);transform:translateY(-2px)}
+
+/* INTRO orb */
+.intro .content{max-width:780px}
+.orb{
+  position:absolute;right:-180px;top:50%;transform:translateY(-50%);
+  width:520px;height:520px;border-radius:50%;
+  background:radial-gradient(circle at 30% 30%, var(--accent) 0%, transparent 60%),
+             radial-gradient(circle at 70% 70%, var(--accent-2) 0%, transparent 55%);
+  filter:blur(60px);opacity:.45;
+  animation:float 9s ease-in-out infinite;
+}
+@keyframes float{50%{transform:translate(-20px,calc(-50% - 20px))}}
+
+/* ABOUT */
+.tags{list-style:none;display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.tags li{
+  font-family:"JetBrains Mono",monospace;font-size:12px;
+  padding:8px 14px;border:1px solid var(--line);border-radius:99px;color:var(--ink);opacity:.85;
+}
+
+/* GAMING cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:18px;max-width:880px}
+.card{
+  background:var(--bg-2);border:1px solid var(--line);border-radius:18px;padding:22px;
+  transition:transform .3s, border-color .3s;
+}
+.card:hover{transform:translateY(-4px);border-color:var(--accent)}
+.card .ico{font-size:28px;margin-bottom:10px}
+.card p{color:var(--muted);font-size:14px;line-height:1.5}
+
+/* MARVEL */
+.heros{display:flex;flex-wrap:wrap;gap:14px;margin-top:14px}
+.heros span{
+  font-family:"Space Grotesk";font-weight:600;font-size:clamp(20px,2.6vw,34px);
+  padding:8px 18px;border-radius:14px;
+  background:linear-gradient(135deg, rgba(122,162,200,.12), rgba(200,168,122,.12));
+  border:1px solid var(--line);
+  transition:transform .3s;
+}
+.heros span:hover{transform:translateY(-3px) rotate(-1deg)}
+
+/* TECH */
+.specs{display:flex;flex-direction:column;gap:14px;margin-top:18px;max-width:760px}
+.specs > div{display:grid;grid-template-columns:160px 1fr;gap:18px;padding:18px 0;border-top:1px solid var(--line)}
+.specs > div:last-child{border-bottom:1px solid var(--line)}
+.k{font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--accent);letter-spacing:.15em;text-transform:uppercase;padding-top:3px}
+.v{color:var(--ink);opacity:.9}
+
+/* STEM */
+.formula{margin-top:24px;padding:32px;border:1px dashed var(--line);border-radius:18px;background:var(--bg-2);max-width:680px}
+.formula code{font-family:"JetBrains Mono",monospace;font-size:clamp(18px,2.2vw,26px);color:var(--accent-3)}
+.formula sup{color:var(--accent-2)}
+
+/* OUTRO */
+.outro{align-items:flex-start}
+.outro h2{color:var(--accent)}
+
+/* ARROWS */
+.arrow{
+  position:fixed;top:50%;transform:translateY(-50%);z-index:5;
+  width:48px;height:48px;border-radius:50%;
+  background:rgba(255,255,255,.04);border:1px solid var(--line);color:var(--ink);
+  font-size:26px;line-height:1;cursor:pointer;backdrop-filter:blur(8px);
+  transition:all .25s;
+}
+.arrow:hover{background:var(--accent);color:var(--bg);border-color:var(--accent)}
+.arrow.left{left:20px}
+.arrow.right{right:20px}
+
+@media (max-width:640px){
+  .top{padding:16px 20px}
+  .slide{padding:100px 24px 60px}
+  .num{right:24px;top:74px}
+  .arrow{display:none}
+  .orb{width:340px;height:340px;right:-140px}
+  .specs > div{grid-template-columns:1fr;gap:6px}
+}

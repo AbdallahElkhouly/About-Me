@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Abdallah — Builder, Gamer, Tech Tinkerer</title>
+<meta name="description" content="A swipeable personal site by Abdallah — gaming, Marvel, STEM, PC building & Arduino." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="top">
+    <div class="brand">AB<span>.</span></div>
+    <nav class="dots" aria-label="sections">
+      <button data-go="0" class="dot active" aria-label="Intro"></button>
+      <button data-go="1" class="dot" aria-label="About"></button>
+      <button data-go="2" class="dot" aria-label="Gaming"></button>
+      <button data-go="3" class="dot" aria-label="Marvel"></button>
+      <button data-go="4" class="dot" aria-label="Tech"></button>
+      <button data-go="5" class="dot" aria-label="STEM"></button>
+      <button data-go="6" class="dot" aria-label="Outro"></button>
+    </nav>
+    <div class="hint">swipe →</div>
+  </header>
+
+  <main id="track" class="track">
+      <section class="slide intro">
+        <div class="content">
+          <p class="kicker">Hello, world.</p>
+          <h1> I'm <span class="accent">Abdallah</span>.<br/>17 . Builder of things that blink, beep & boot.</h1>
+          <p class="lede">A small swipeable tour through the stuff I love.</p>
+          <button class="cta" data-next>Begin the tour →</button>
+        </div>
+        <div class="orb" aria-hidden="true"></div>
+      </section>
+
+      <section class="slide about">
+        <span class="num">01</span>
+        <h2>About</h2>
+        <p class="big">I'm a curious 17 years old who likes <em>figuring out how things work</em>
+        from a transistor on a breadboard to a comic-book multiverse.</p>
+        <ul class="tags">
+          <li>Learner</li><li>Tinkerer</li><li>Gamer</li><li>Night-owl</li><li>Question-asker</li>
+        </ul>
+      </section>
+      
+      <section class="slide gaming">
+        <span class="num">02</span>
+        <h2>Gaming</h2>
+        <p class="big" Controllers, Keyboards, Late-night lobbies. Gaming is how I unwind <em>and</em> how I started caring about hardware specs.</p>
+        <div class="cards">
+          <div class="card"><div class="ico">🎮</div><h3>Play style</h3><p>Co-op &gt; sweat. Story &gt; grind.</p></div>
+          <div class="card"><div class="ico">🖥</div><h3>Setup</h3><p>Built my own rig - every cable, every fan.</p></div>
+          <div class="card"><div class="ico">⚡</div><h3>Mood</h3><p>One more match. Always.</p></div>
+        </div>
+      </section>
+
+      <section class="slide marvel">
+      <span class="num">03</span>
+      <h2>Marvel</h2>
+      <p class="big">From comics to the cinematic universe... I'm into the <em>lore</em>, the timelines, the "what if" of it all.</p>
+      <div class="heros">
+        <span>Spider-Man</span><span>Iron Man</span><span>Doctor Strange</span><span>Loki</span><span>Vision</span>
+      </div>
+    </section>
+
+      <section class="slide tech">
+        <span class="num">04</span>
+        <h2>Tech &amp; Hardware</h2>
+        <p class="big">I built my own PC...that's where I really fell in love with hardware. Then cam Arduino, and suddenly every idea felt buildable.</p>
+        <div class="specs">
+          <div><span class="k">PC build</span><span class="v">CPU . GPU . RAM . Cooling - Picked, Paired, Plugged in.</span></div>
+          <div><span class="k">Arduino</span><span class="v">Sensors, LEDs, Motors. Code that touches the real world.</span></div>
+          <div><span class="k">Always next</span><span class="v">Soldering iron, 3D printer, maybe an AI Agent (BMO) someday.</span></div>
+        </div>
+      </section>
+
+      <section class="slide STEM">
+        <span class="num">05</span>
+        <h2>STEM Brain</h2>
+        <p class="big">Math, Physics, Code electronics. They're not subjects to me... they're the toolbox.</p>
+        <div class="formula">
+          <code>Curiosity &times; Practice<sub>2</sub>= Progress</code>
+        </div>
+      </section>
+
+      <section class="slide outro">
+      <span class="num">06</span>
+      <h2>That's me.</h2>
+      <p class="big">Always learning. Always building. Thanks for swiping through.</p>
+      <button class="cta" data-go="0">↺ start over</button>
+      </section>
+    </main>
+
+   <button class="arrow left" data-prev aria-label="previous">‹</button>
+   <button class="arrow right" data-next aria-label="next">›</button>
+
+
+    <script src="script.js"></script>
+
+  </body>
+  </html>
